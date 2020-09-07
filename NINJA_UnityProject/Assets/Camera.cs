@@ -61,7 +61,7 @@ public class Camera : MonoBehaviour
         player.Rotate(Vector3.up * mouseX);
         player.Rotate(Vector3.up * ContX);
 
-        if (Input.GetButton("Jump") == true) {
+        if (Input.GetButton("Cont_Jump") == true) {
             player.GetComponent<Rigidbody>().AddForce(0f, JumpForce, 0f);
         }
 
