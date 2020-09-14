@@ -21,7 +21,7 @@ public class Camera : MonoBehaviour
     private GameObject play;   //プレイヤー情報格納用
     private Vector3 offset;    //相対距離取得用
 
-    public float JumpForce = 9.0f;
+    public float JumpForce = 30.0f;          //カメラ
 
 
     private void Start()
@@ -64,6 +64,14 @@ public class Camera : MonoBehaviour
         if (Input.GetButton("Cont_Jump") == true) {
             player.GetComponent<Rigidbody>().AddForce(0f, JumpForce, 0f);
         }
+
+
+        //if (player.transform.rotation.x > 0f)
+        //    player.transform.rotation = new Vector3(0f, player.transform.rotation.y, player.transform.rotation.z);
+        //if (player.transform.rotation.z > 0f)
+        //    player.transform.rotation = new Vector3(player.transform.rotation.x, player.transform.rotation.y, 0f);
+
+        //player.GetComponent<PlayerMovement>().enabled = false;
 
     }
 }
