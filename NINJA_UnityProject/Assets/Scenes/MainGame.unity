@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 30905419}
   - component: {fileID: 30905418}
   - component: {fileID: 30905417}
+  - component: {fileID: 30905421}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -217,6 +218,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &30905421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30905416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6797e44e42ef3974c815b7c2136e339a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 981807081}
+  play2: {fileID: 566854776}
 --- !u!1 &42080416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,6 +3141,7 @@ GameObject:
   - component: {fileID: 849494228}
   - component: {fileID: 849494227}
   - component: {fileID: 849494226}
+  - component: {fileID: 849494229}
   m_Layer: 0
   m_Name: trap1
   m_TagString: Finish
@@ -3208,6 +3224,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849494224}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &849494229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849494224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb184d4770f1d7468db2609ca51ebb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4327,6 +4355,7 @@ GameObject:
   - component: {fileID: 1218760492}
   - component: {fileID: 1218760491}
   - component: {fileID: 1218760490}
+  - component: {fileID: 1218760493}
   m_Layer: 0
   m_Name: trap2
   m_TagString: Untagged
@@ -4409,6 +4438,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218760488}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1218760493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218760488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb184d4770f1d7468db2609ca51ebb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1250106903
 GameObject:
   m_ObjectHideFlags: 0

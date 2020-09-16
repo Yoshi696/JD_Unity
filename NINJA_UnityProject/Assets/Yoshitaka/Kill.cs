@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class Kill : MonoBehaviour
 {
     //private GameObject Camera2;
-    public GameObject sphe;
-    public GameObject camera;
-    public GameObject play2;
+    //public GameObject sphe;
+    //public GameObject camera;
+    //public GameObject play2;
    // private Vector3 pos1;
 
     private void Start()
@@ -22,8 +22,8 @@ public class Kill : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            play2.GetComponent<PlayerMovement>().enabled = false;
-            camera.GetComponent<Camera>().enabled = false;
+            //play2.GetComponent<PlayerMovement>().enabled = false;
+            //camera.GetComponent<Camera>().enabled = false;
             //Destroy(sphe);
             //pos1 = GameObject.Find("Player2").transform.position;
             //Debug.Log(pos1);
