@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 54447613}
   m_Layer: 0
   m_Name: Air_act5
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 57019589}
   m_Layer: 0
   m_Name: Air_act8
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 199286673}
   m_Layer: 0
   m_Name: Air_scaf6
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -697,7 +697,7 @@ GameObject:
   - component: {fileID: 237566962}
   m_Layer: 0
   m_Name: Air_scaf15
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1070,7 +1070,7 @@ GameObject:
   - component: {fileID: 297710487}
   m_Layer: 0
   m_Name: Air_act8 (1)
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1256,7 +1256,7 @@ GameObject:
   - component: {fileID: 379019533}
   m_Layer: 0
   m_Name: Air_scaf21
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1349,7 +1349,7 @@ GameObject:
   - component: {fileID: 391320662}
   m_Layer: 0
   m_Name: Air_scaf14
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1721,7 +1721,7 @@ GameObject:
   - component: {fileID: 461574552}
   m_Layer: 0
   m_Name: Air_scaf3
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1848,7 +1848,7 @@ GameObject:
   - component: {fileID: 496287681}
   m_Layer: 0
   m_Name: Air_scaf4
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1941,7 +1941,7 @@ GameObject:
   - component: {fileID: 502108227}
   m_Layer: 0
   m_Name: Air_act2
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2127,7 +2127,7 @@ GameObject:
   - component: {fileID: 525045176}
   m_Layer: 0
   m_Name: Air_scaf
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2286,6 +2286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   acceleration: 0
+  cs: {fileID: 981807085}
   rb: {fileID: 566854777}
   JumpForce: 5
   isJump: 0
@@ -2793,7 +2794,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665207951}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -46.9163, y: 15.990799, z: 2.3149}
+  m_LocalPosition: {x: -47.1, y: 15.990799, z: 2.3149}
   m_LocalScale: {x: 100, y: 35, z: 0.5}
   m_Children: []
   m_Father: {fileID: 478780051}
@@ -3030,7 +3031,7 @@ GameObject:
   - component: {fileID: 829350031}
   m_Layer: 0
   m_Name: Air_scaf20
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3385,6 +3386,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   Sensitivity: 500
   player: {fileID: 566854779}
+  mouseX: 0
+  mouseY: 0
+  ContX: 0
+  ContY: 0
 --- !u!1 &986916118
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,7 +3684,7 @@ GameObject:
   - component: {fileID: 1043137861}
   m_Layer: 0
   m_Name: Air_scaf10
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3824,7 +3829,7 @@ GameObject:
   - component: {fileID: 1085680407}
   m_Layer: 0
   m_Name: Air_act4
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4010,7 +4015,7 @@ GameObject:
   - component: {fileID: 1164756671}
   m_Layer: 0
   m_Name: Air_scaf16
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4103,7 +4108,7 @@ GameObject:
   - component: {fileID: 1168878333}
   m_Layer: 0
   m_Name: Air_scaf11
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4203,6 +4208,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   Sensitivity: 500
   player: {fileID: 566854779}
+  mouseX: 0
+  mouseY: 0
+  ContX: 0
+  ContY: 0
 --- !u!1 &1201449644
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,7 +4226,7 @@ GameObject:
   - component: {fileID: 1201449646}
   m_Layer: 0
   m_Name: Air_scaf 2
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4404,7 +4413,7 @@ GameObject:
   - component: {fileID: 1250106905}
   m_Layer: 0
   m_Name: Air_act1
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4963,7 +4972,7 @@ GameObject:
   - component: {fileID: 1423830858}
   m_Layer: 0
   m_Name: Air_scaf (1)
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5056,7 +5065,7 @@ GameObject:
   - component: {fileID: 1426229701}
   m_Layer: 0
   m_Name: Air_scaf7
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5149,7 +5158,7 @@ GameObject:
   - component: {fileID: 1494034924}
   m_Layer: 0
   m_Name: Air_scaf5
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5463,7 +5472,7 @@ GameObject:
   - component: {fileID: 1553553364}
   m_Layer: 0
   m_Name: Air_scaf18
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5874,7 +5883,7 @@ GameObject:
   - component: {fileID: 1652493609}
   m_Layer: 0
   m_Name: Air_scaf9
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5967,7 +5976,7 @@ GameObject:
   - component: {fileID: 1679698962}
   m_Layer: 0
   m_Name: Air_scaf19
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6060,7 +6069,7 @@ GameObject:
   - component: {fileID: 1684770659}
   m_Layer: 0
   m_Name: Air_scaf17
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6153,7 +6162,7 @@ GameObject:
   - component: {fileID: 1728945606}
   m_Layer: 0
   m_Name: Air_scaf13
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6339,7 +6348,7 @@ GameObject:
   - component: {fileID: 1774319057}
   m_Layer: 0
   m_Name: Air_scaf8
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6836,7 +6845,7 @@ GameObject:
   - component: {fileID: 1946011153}
   m_Layer: 0
   m_Name: Air_scaf12
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6929,7 +6938,7 @@ GameObject:
   - component: {fileID: 2008089860}
   m_Layer: 0
   m_Name: Air_scaf9
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7022,7 +7031,7 @@ GameObject:
   - component: {fileID: 2050219437}
   m_Layer: 0
   m_Name: Air_scaf10
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

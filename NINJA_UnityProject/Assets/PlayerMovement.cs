@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 0.5f;
     public float acceleration = 0;
 
+    //カメラのスクリプト
+    public CamSystem cs;
 
     //プレイヤーのRigitBody
     public Rigidbody rb;
@@ -17,6 +19,10 @@ public class PlayerMovement : MonoBehaviour
 
     //ジャンプのフラグ
     public bool isJump = false;
+
+    //ターンフラグ
+    public bool RightTurnFlg = false;
+    public bool LeftTurnFlg = false;
 
     private void FixedUpdate()
     {
@@ -37,6 +43,9 @@ public class PlayerMovement : MonoBehaviour
 
         //ジャンプの挙動
         Player_Jump();
+
+        //直角に曲がる処理
+        Player_Turn();
     }
 
     //オブジェクトに触れたら発動
@@ -61,6 +70,26 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector3.up * JumpForce;
             isJump = true;
         }
+    }
+
+    //直角に曲がる処理
+    void Player_Turn() {
+        if (Input.GetButton("Cont_R1") == true && RightTurnFlg == false)
+        {
+            cs.Turn_Vec = -1;
+            RightTurnFlg = true;
+        }
+        if (Input.GetButton("Cont_R1") == false)
+            RightTurnFlg = false;
+
+        if (Input.GetButton("Cont_L1") == true && LeftTurnFlg == false)
+        {
+            cs.Turn_Vec = 1;
+            LeftTurnFlg = true;
+        }
+        if (Input.GetButton("Cont_L1") == false)
+            LeftTurnFlg = false;
+        
     }
 
     IEnumerator WaitKeyInput() {
