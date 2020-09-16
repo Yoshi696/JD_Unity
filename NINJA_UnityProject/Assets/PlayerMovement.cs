@@ -8,8 +8,6 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed = 0.5f;
     public float acceleration = 0;
-<<<<<<< HEAD
-=======
 
     //カメラのスクリプト
     public CamSystem cs;
@@ -23,11 +21,13 @@ public class PlayerMovement : MonoBehaviour
     //ジャンプのフラグ
     public bool isJump = false;
 
+    //壁ジャンプのフラグ
+    public bool isWallJump = false;
+
     //ターンフラグ
     public bool RightTurnFlg = false;
     public bool LeftTurnFlg = false;
 
->>>>>>> 96753de21c34fd0ae6b5cb16a70f40c055bc24d4
     private void FixedUpdate()
     {
         if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
@@ -65,6 +65,15 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    //オブジェクトから離れたら発動
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "wall")
+        {
+            isWallJump = false;
+        }
+    }
+
     //ジャンプの挙動
     void Player_Jump()
     {
@@ -73,6 +82,14 @@ public class PlayerMovement : MonoBehaviour
             //play.GetComponent<Rigidbody>().AddForce(0f, JumpForce, 0f);
             rb.velocity = Vector3.up * JumpForce;
             isJump = true;
+        }
+
+        if (Input.GetButton("Cont_Jump") == true && isJump == true && isWallJump == false)      //壁ジャンプ
+        {
+            //play.GetComponent<Rigidbody>().AddForce(0f, JumpForce, 0f);
+            rb.velocity = Vector3.up * JumpForce;
+            isWallJump = true;
+            cs.Turn_Vec = 2;
         }
     }
 
