@@ -69,6 +69,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "Wall") {
+            isWall = false;
+        }
+    }
+
     //ジャンプの挙動
     void Player_Jump()
     {
