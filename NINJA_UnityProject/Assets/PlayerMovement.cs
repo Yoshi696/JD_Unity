@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
 
     public float speed = 0.5f;
     public float acceleration = 0;
+<<<<<<< HEAD
+=======
 
     //カメラのスクリプト
     public CamSystem cs;
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public bool RightTurnFlg = false;
     public bool LeftTurnFlg = false;
 
+>>>>>>> 96753de21c34fd0ae6b5cb16a70f40c055bc24d4
     private void FixedUpdate()
     {
         if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
