@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
 
     public float speed = 0.5f;
     public float acceleration = 0;
-
     private void FixedUpdate()
     {
         if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
