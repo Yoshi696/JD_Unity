@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.59836286, b: 0, a: 1}
+  m_Color: {r: 0.7169523, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -216,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &30905417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1892,7 +1892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &478780051
 Transform:
   m_ObjectHideFlags: 0
@@ -2362,6 +2362,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   acceleration: 0
+  cs: {fileID: 0}
+  rb: {fileID: 0}
+  isJump: 0
+  JumpForce: 100
+  isWall: 0
+  WallJumpForce: 0
+  RightTurnFlg: 0
+  LeftTurnFlg: 0
 --- !u!1 &586240786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2564,7 +2572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &601163088
 Transform:
   m_ObjectHideFlags: 0
@@ -3149,7 +3157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &774078463
 Transform:
   m_ObjectHideFlags: 0
@@ -3366,9 +3374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb184d4770f1d7468db2609ca51ebb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphe: {fileID: 292547452}
-  camera: {fileID: 981807081}
-  play2: {fileID: 566854776}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3404,8 +3409,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 0.07661387, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3446,7 +3451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 59.4, y: 1, z: -27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3552,6 +3557,7 @@ MonoBehaviour:
   Sensitivity: 500
   player: {fileID: 566854779}
   JumpForce: 9
+  isJump: 0
 --- !u!1 &986916118
 GameObject:
   m_ObjectHideFlags: 0
@@ -3940,7 +3946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1075232479
 Transform:
   m_ObjectHideFlags: 0
@@ -4549,9 +4555,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb184d4770f1d7468db2609ca51ebb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphe: {fileID: 292547452}
-  camera: {fileID: 981807081}
-  play2: {fileID: 566854776}
 --- !u!1 &1250106903
 GameObject:
   m_ObjectHideFlags: 0
@@ -5405,7 +5408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1501261837
 Transform:
   m_ObjectHideFlags: 0
@@ -6142,7 +6145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1648266249
 Transform:
   m_ObjectHideFlags: 0
@@ -6804,7 +6807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1853313618
 Transform:
   m_ObjectHideFlags: 0
@@ -7025,7 +7028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1896355460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7673,7 +7676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2109210168
 Transform:
   m_ObjectHideFlags: 0
