@@ -5,10 +5,10 @@ using Unity.Collections.LowLevel.Unsafe;
 using UnityEditor;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CamSystem : MonoBehaviour
 {
     //カメラ型の変数
-    public Camera cam;
+    public GameObject cam;
 
     //視点の回転速度
     public float Sensitivity = 500f;
@@ -26,23 +26,16 @@ public class Camera : MonoBehaviour
     //プレイヤーのTransform
     public Transform player;
 
-    //プレイヤーのRigitBody
-    private Rigidbody rb;
-
-    //ジャンプ力
-    public float JumpForce = 100.0f;
-
-    //ジャンプのフラグ
-    public bool isJump = false;
 
     private void Start()
     {
-        cam = this.gameObject.GetComponent<Camera>();
+
+        cam = GameObject.Find("PlayerCamera");
+
         Cursor.lockState = CursorLockMode.Locked;
 
-        ////unitychanの情報を取得
+
         play = GameObject.Find("Player2");
-        rb = play.GetComponent<Rigidbody>();
 
         //// MainCamera(自分自身)とplayerとの相対距離を求める
         //offset = transform.position - player.transform.position;
@@ -55,16 +48,13 @@ public class Camera : MonoBehaviour
 
         //右スティックの挙動
         RightStick();
-        
-        //ジャンプの挙動
-        Player_Jump();
-
 
 
     }
 
     //右スティックの挙動
-    void RightStick() {
+    void RightStick()
+    {
         gameObject.transform.rotation = Quaternion.Euler(play.transform.rotation.x, play.transform.rotation.y, play.transform.rotation.z);
 
         ////新しいトランスフォームの値を代入する
@@ -86,24 +76,6 @@ public class Camera : MonoBehaviour
         cam.transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);
         player.Rotate(Vector3.up * mouseX);
         player.Rotate(Vector3.up * ContX);
-    }
-
-    //ジャンプの挙動
-    void Player_Jump() {
-        if (Input.GetButton("Cont_Jump") == true && isJump == false)
-        {
-            //play.GetComponent<Rigidbody>().AddForce(0f, JumpForce, 0f);
-            rb.velocity = Vector3.up * JumpForce;
-            isJump = true;
-        }
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Roads")
-        {
-            isJump = false;
-        }
     }
 
 }
