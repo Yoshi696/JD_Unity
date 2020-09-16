@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
 
     //直角に曲がる処理
     void Player_Turn() {
-        if (Input.GetButton("Cont_R1") == true && RightTurnFlg == false)
+        if (Input.GetButton("Cont_R1") == true && RightTurnFlg == false && !isJump)
         {
             cs.Turn_Vec = -1;
             RightTurnFlg = true;
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Cont_R1") == false)
             RightTurnFlg = false;
 
-        if (Input.GetButton("Cont_L1") == true && LeftTurnFlg == false)
+        if (Input.GetButton("Cont_L1") == true && LeftTurnFlg == false && !isJump)
         {
             cs.Turn_Vec = 1;
             LeftTurnFlg = true;
