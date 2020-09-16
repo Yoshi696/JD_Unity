@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 54447613}
   m_Layer: 0
   m_Name: Air_act5
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 57019589}
   m_Layer: 0
   m_Name: Air_act8
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 199286673}
   m_Layer: 0
   m_Name: Air_scaf6
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 237566962}
   m_Layer: 0
   m_Name: Air_scaf15
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1098,7 +1098,7 @@ GameObject:
   - component: {fileID: 297710487}
   m_Layer: 0
   m_Name: Air_act8 (1)
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1284,7 +1284,7 @@ GameObject:
   - component: {fileID: 379019533}
   m_Layer: 0
   m_Name: Air_scaf21
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1377,7 +1377,7 @@ GameObject:
   - component: {fileID: 391320662}
   m_Layer: 0
   m_Name: Air_scaf14
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1656,7 +1656,7 @@ GameObject:
   - component: {fileID: 456574788}
   m_Layer: 0
   m_Name: wall3
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1749,7 +1749,7 @@ GameObject:
   - component: {fileID: 461574552}
   m_Layer: 0
   m_Name: Air_scaf3
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1876,7 +1876,7 @@ GameObject:
   - component: {fileID: 496287681}
   m_Layer: 0
   m_Name: Air_scaf4
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1969,7 +1969,7 @@ GameObject:
   - component: {fileID: 502108227}
   m_Layer: 0
   m_Name: Air_act2
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2155,7 +2155,7 @@ GameObject:
   - component: {fileID: 525045176}
   m_Layer: 0
   m_Name: Air_scaf
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2292,11 +2292,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566854776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 48.06, y: 1.59, z: -45.1}
+=======
+  m_LocalPosition: {x: 47.49, y: 1.56, z: -44.31}
+>>>>>>> 96753de21c34fd0ae6b5cb16a70f40c055bc24d4
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 292547453}
   - {fileID: 981807082}
+  - {fileID: 6025512496457447486}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2314,6 +2319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   acceleration: 0
+<<<<<<< HEAD
 --- !u!114 &566854781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2326,6 +2332,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28fd3fcf27ee0f49bf391b6b5c7c5b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  cs: {fileID: 981807085}
+  rb: {fileID: 566854777}
+  JumpForce: 5
+  isJump: 0
+>>>>>>> 96753de21c34fd0ae6b5cb16a70f40c055bc24d4
 --- !u!1 &586240786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,7 +2842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665207951}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -46.9163, y: 15.990799, z: 2.3149}
+  m_LocalPosition: {x: -47.1, y: 15.990799, z: 2.3149}
   m_LocalScale: {x: 100, y: 35, z: 0.5}
   m_Children: []
   m_Father: {fileID: 478780051}
@@ -3067,7 +3079,7 @@ GameObject:
   - component: {fileID: 829350031}
   m_Layer: 0
   m_Name: Air_scaf20
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3162,7 +3174,7 @@ GameObject:
   - component: {fileID: 849494230}
   m_Layer: 0
   m_Name: trap1
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3365,7 +3377,7 @@ GameObject:
   - component: {fileID: 981807083}
   - component: {fileID: 981807085}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: PlayerCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3445,13 +3457,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 981807081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661be469cc0131d449d4e246783838a9, type: 3}
+  m_Script: {fileID: 11500000, guid: b4e7b1ae9f9c89841b505065796386d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   Sensitivity: 500
   player: {fileID: 566854779}
-  JumpForce: 9
+  mouseX: 0
+  mouseY: 0
+  ContX: 0
+  ContY: 0
 --- !u!1 &986916118
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,7 +3761,7 @@ GameObject:
   - component: {fileID: 1043137861}
   m_Layer: 0
   m_Name: Air_scaf10
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3891,7 +3906,7 @@ GameObject:
   - component: {fileID: 1085680407}
   m_Layer: 0
   m_Name: Air_act4
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4077,7 +4092,7 @@ GameObject:
   - component: {fileID: 1164756671}
   m_Layer: 0
   m_Name: Air_scaf16
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4170,7 +4185,7 @@ GameObject:
   - component: {fileID: 1168878333}
   m_Layer: 0
   m_Name: Air_scaf11
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4249,6 +4264,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168878331}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1183014812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1308369011459414949, guid: 554c4fae99141534c867c5ace00bd27d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6025512496457447485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1183014813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183014812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e7b1ae9f9c89841b505065796386d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  Sensitivity: 500
+  player: {fileID: 566854779}
+  mouseX: 0
+  mouseY: 0
+  ContX: 0
+  ContY: 0
 --- !u!1 &1201449644
 GameObject:
   m_ObjectHideFlags: 0
@@ -4263,7 +4303,7 @@ GameObject:
   - component: {fileID: 1201449646}
   m_Layer: 0
   m_Name: Air_scaf 2
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4479,7 +4519,7 @@ GameObject:
   - component: {fileID: 1250106905}
   m_Layer: 0
   m_Name: Air_act1
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5038,7 +5078,7 @@ GameObject:
   - component: {fileID: 1423830858}
   m_Layer: 0
   m_Name: Air_scaf (1)
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5131,7 +5171,7 @@ GameObject:
   - component: {fileID: 1426229701}
   m_Layer: 0
   m_Name: Air_scaf7
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5224,7 +5264,7 @@ GameObject:
   - component: {fileID: 1494034924}
   m_Layer: 0
   m_Name: Air_scaf5
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5538,7 +5578,7 @@ GameObject:
   - component: {fileID: 1553553364}
   m_Layer: 0
   m_Name: Air_scaf18
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5949,7 +5989,7 @@ GameObject:
   - component: {fileID: 1652493609}
   m_Layer: 0
   m_Name: Air_scaf9
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6042,7 +6082,7 @@ GameObject:
   - component: {fileID: 1679698962}
   m_Layer: 0
   m_Name: Air_scaf19
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6135,7 +6175,7 @@ GameObject:
   - component: {fileID: 1684770659}
   m_Layer: 0
   m_Name: Air_scaf17
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6228,7 +6268,7 @@ GameObject:
   - component: {fileID: 1728945606}
   m_Layer: 0
   m_Name: Air_scaf13
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6414,7 +6454,7 @@ GameObject:
   - component: {fileID: 1774319057}
   m_Layer: 0
   m_Name: Air_scaf8
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6725,7 +6765,7 @@ GameObject:
   - component: {fileID: 1896355460}
   m_Layer: 0
   m_Name: Earth
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6911,7 +6951,7 @@ GameObject:
   - component: {fileID: 1946011153}
   m_Layer: 0
   m_Name: Air_scaf12
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7004,7 +7044,7 @@ GameObject:
   - component: {fileID: 2008089860}
   m_Layer: 0
   m_Name: Air_scaf9
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7097,7 +7137,7 @@ GameObject:
   - component: {fileID: 2050219437}
   m_Layer: 0
   m_Name: Air_scaf10
-  m_TagString: Untagged
+  m_TagString: Roads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7398,3 +7438,100 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6025512496457447485
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 566854779}
+    m_Modifications:
+    - target: {fileID: 1308369011459414949, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_Name
+      value: Camera (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308369011459414949, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128506313142300386, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 566854779}
+    - target: {fileID: 7128506313142300386, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: camCopy
+      value: 
+      objectReference: {fileID: 1308369011459414949, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+    - target: {fileID: 7128506313142300386, guid: 554c4fae99141534c867c5ace00bd27d,
+        type: 3}
+      propertyPath: JumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7128506313142300386, guid: 554c4fae99141534c867c5ace00bd27d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 554c4fae99141534c867c5ace00bd27d, type: 3}
+--- !u!4 &6025512496457447486 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7042537689943216891, guid: 554c4fae99141534c867c5ace00bd27d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6025512496457447485}
+  m_PrefabAsset: {fileID: 0}

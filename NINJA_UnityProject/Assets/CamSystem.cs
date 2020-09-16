@@ -5,10 +5,10 @@ using Unity.Collections.LowLevel.Unsafe;
 using UnityEditor;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CamSystem : MonoBehaviour
 {
     //カメラ型の変数
-    public Camera cam;
+    public GameObject cam;
 
     //視点の回転速度
     public float Sensitivity = 500f;
@@ -17,32 +17,33 @@ public class Camera : MonoBehaviour
     //コントローラーが刺さってるかどうかのフラグ
     private bool ControllerFlg = true;
 
-    //プレイヤーの回転アングル
-    float xRot = 0f;
+    //カメラの回転アングル
+    public float xRot = 0f;
+
+    //プレイヤーの向き
+    
 
     private GameObject play;   //プレイヤー情報格納用
     private Vector3 offset;    //相対距離取得用
 
     //プレイヤーのTransform
     public Transform player;
-
-    //プレイヤーのRigitBody
-    private Rigidbody rb;
-
-    //ジャンプ力
-    public float JumpForce = 100.0f;
-
-    //ジャンプのフラグ
-    public bool isJump = false;
+    public float mouseX;
+    public float mouseY;
+    public float ContX;
+    public float ContY;
+    public int Turn_Vec = 0;
+    public float Turn_Angle = 0f;
 
     private void Start()
     {
-        cam = this.gameObject.GetComponent<Camera>();
+
+        cam = GameObject.Find("PlayerCamera");
+
         Cursor.lockState = CursorLockMode.Locked;
 
-        ////unitychanの情報を取得
+
         play = GameObject.Find("Player2");
-        rb = play.GetComponent<Rigidbody>();
 
         //// MainCamera(自分自身)とplayerとの相対距離を求める
         //offset = transform.position - player.transform.position;
@@ -55,16 +56,14 @@ public class Camera : MonoBehaviour
 
         //右スティックの挙動
         RightStick();
-        
-        //ジャンプの挙動
-        Player_Jump();
 
 
 
     }
 
     //右スティックの挙動
-    void RightStick() {
+    void RightStick()
+    {
         gameObject.transform.rotation = Quaternion.Euler(play.transform.rotation.x, play.transform.rotation.y, play.transform.rotation.z);
 
         ////新しいトランスフォームの値を代入する
@@ -74,36 +73,32 @@ public class Camera : MonoBehaviour
         if (controllerNames[0] == "") ControllerFlg = false;
         else ControllerFlg = true;
 
-        float mouseX = Input.GetAxis("Mouse X") * Sensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * Sensitivity * Time.deltaTime;
-        float ContX = Input.GetAxis("R_Stick_H") * ContSensitivity * Time.deltaTime;
-        float ContY = Input.GetAxis("R_Stick_V") * ContSensitivity * Time.deltaTime;
+        //mouseX = Input.GetAxis("Mouse X") * Sensitivity * Time.deltaTime;
+        //mouseY = Input.GetAxis("Mouse Y") * Sensitivity * Time.deltaTime;
+        //ContX = Input.GetAxis("R_Stick_H") * ContSensitivity * Time.deltaTime;
+        //ContY = Input.GetAxis("R_Stick_V") * ContSensitivity * Time.deltaTime;
+        //Turn_Angle = Turn_Angle * ContSensitivity * Time.deltaTime;
+
+        mouseX = 0 * Sensitivity * Time.deltaTime;
+        mouseY = 0 * Sensitivity * Time.deltaTime;
+        ContX = 0 * ContSensitivity * Time.deltaTime;
+        ContY = 0 * ContSensitivity * Time.deltaTime;
+
+        if (Turn_Vec != 0) {
+            ContX = Turn_Vec * 90f;
+        }
 
         if (!ControllerFlg) xRot -= mouseY;
         else xRot -= ContY;
         xRot = Mathf.Clamp(xRot, -90f, 90f);
 
-        cam.transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);
+
+        cam.transform.localRotation = Quaternion.Euler(xRot, Turn_Angle, 0f);
+
         player.Rotate(Vector3.up * mouseX);
         player.Rotate(Vector3.up * ContX);
-    }
 
-    //ジャンプの挙動
-    void Player_Jump() {
-        if (Input.GetButton("Cont_Jump") == true && isJump == false)
-        {
-            //play.GetComponent<Rigidbody>().AddForce(0f, JumpForce, 0f);
-            rb.velocity = Vector3.up * JumpForce;
-            isJump = true;
-        }
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Roads")
-        {
-            isJump = false;
-        }
+        Turn_Vec = 0;
     }
 
 }
