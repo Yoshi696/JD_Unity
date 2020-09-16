@@ -6,28 +6,26 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float speed = 0.5f;
-    public float acceleration = 0;
-<<<<<<< HEAD
-=======
+    //プレイヤーの移動関連
+    public float speed = 0.5f;          //移動速度
+    public float acceleration = 0;      //加速度
 
-    //カメラのスクリプト
-    public CamSystem cs;
+    //スクリプト関連
+    public CamSystem cs;                //カメラ
+    public Rigidbody rb;                //プレイヤーのRigitBody
+    
+    //ジャンプ関連
+    public bool isJump = false;         //ジャンプのフラグ
+    public float JumpForce = 100.0f;    //ジャンプ力
 
-    //プレイヤーのRigitBody
-    public Rigidbody rb;
-
-    //ジャンプ力
-    public float JumpForce = 100.0f;
-
-    //ジャンプのフラグ
-    public bool isJump = false;
+    //壁キック関連
+    public bool isWall = false;     //壁キック
+    public float WallJumpForce = 0f;    //壁キックの力
 
     //ターンフラグ
-    public bool RightTurnFlg = false;
-    public bool LeftTurnFlg = false;
+    public bool RightTurnFlg = false;   //右90°ターン
+    public bool LeftTurnFlg = false;    //左90°ターン
 
->>>>>>> 96753de21c34fd0ae6b5cb16a70f40c055bc24d4
     private void FixedUpdate()
     {
         if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
@@ -48,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
         //ジャンプの挙動
         Player_Jump();
 
+        //壁キックの処理
+        Player_Wall_Jump();
+
         //直角に曲がる処理
         Player_Turn();
     }
@@ -61,6 +62,9 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "Roads")
         {
             isJump = false;
+        }
+        if (other.gameObject.tag == "Wall") {
+            isWall = true;
         }
 
     }
@@ -76,11 +80,26 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //壁キック
+    void Player_Wall_Jump() {
+
+        if (isJump == true && isWall == true && Input.GetButton("Cont_Jump") == true) {
+            
+            rb.velocity = Vector3.up * JumpForce;
+            cs.Turn_Vec = -1;
+            cs.Turn_Angle = 180f;
+            isWall = false;
+        }
+
+    }
+
     //直角に曲がる処理
     void Player_Turn() {
+
         if (Input.GetButton("Cont_R1") == true && RightTurnFlg == false && !isJump)
         {
             cs.Turn_Vec = -1;
+            cs.Turn_Angle = 90f;
             RightTurnFlg = true;
         }
         if (Input.GetButton("Cont_R1") == false)
@@ -89,6 +108,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Cont_L1") == true && LeftTurnFlg == false && !isJump)
         {
             cs.Turn_Vec = 1;
+            cs.Turn_Angle = 90f;
             LeftTurnFlg = true;
         }
         if (Input.GetButton("Cont_L1") == false)
@@ -96,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    //反射時に一定時間だけ処理を止める
     IEnumerator WaitKeyInput() {
 
         this.gameObject.GetComponent<PlayerMovement>().enabled = false;

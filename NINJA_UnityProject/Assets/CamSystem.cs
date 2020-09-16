@@ -21,8 +21,6 @@ public class CamSystem : MonoBehaviour
     public float xRot = 0f;
 
     //プレイヤーの向き
-    
-
     private GameObject play;   //プレイヤー情報格納用
     private Vector3 offset;    //相対距離取得用
 
@@ -33,7 +31,7 @@ public class CamSystem : MonoBehaviour
     public float ContX;
     public float ContY;
     public int Turn_Vec = 0;
-    public float Turn_Angle = 0f;
+    public float Turn_Angle = 0;
 
     private void Start()
     {
@@ -56,7 +54,6 @@ public class CamSystem : MonoBehaviour
 
         //右スティックの挙動
         RightStick();
-
 
 
     }
@@ -84,9 +81,12 @@ public class CamSystem : MonoBehaviour
         ContX = 0 * ContSensitivity * Time.deltaTime;
         ContY = 0 * ContSensitivity * Time.deltaTime;
 
+
         if (Turn_Vec != 0) {
-            ContX = Turn_Vec * 90f;
+            ContX = Turn_Vec * Turn_Angle;
         }
+
+
 
         if (!ControllerFlg) xRot -= mouseY;
         else xRot -= ContY;
@@ -99,6 +99,7 @@ public class CamSystem : MonoBehaviour
         player.Rotate(Vector3.up * ContX);
 
         Turn_Vec = 0;
+        Turn_Angle = 0;
     }
 
 }

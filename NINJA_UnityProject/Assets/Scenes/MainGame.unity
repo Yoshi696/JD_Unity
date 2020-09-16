@@ -1628,7 +1628,7 @@ GameObject:
   - component: {fileID: 456574788}
   m_Layer: 0
   m_Name: wall3
-  m_TagString: Finish
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2288,8 +2288,10 @@ MonoBehaviour:
   acceleration: 0
   cs: {fileID: 981807085}
   rb: {fileID: 566854777}
-  JumpForce: 5
   isJump: 0
+  JumpForce: 5
+  isWall: 0
+  WallJumpForce: 0
   RightTurnFlg: 0
   LeftTurnFlg: 0
 --- !u!1 &586240786
@@ -4794,7 +4796,7 @@ GameObject:
   - component: {fileID: 1362429369}
   m_Layer: 0
   m_Name: wall_in1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
