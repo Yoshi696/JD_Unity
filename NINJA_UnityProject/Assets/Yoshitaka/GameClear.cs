@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameClear : MonoBehaviour
 {
-    public GameObject camera;
-    public GameObject play2;
+    //public GameObject camera;
+    //public GameObject play2;
     //private Vector3 pos1;
 
     // Start is called before the first frame update
@@ -22,8 +22,8 @@ public class GameClear : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
          //   pos1 = GameObject.Find("Player2").transform.position;
-            play2.GetComponent<PlayerMovement>().enabled = false;
-            camera.GetComponent<Camera>().enabled = false;
+            //play2.GetComponent<PlayerMovement>().enabled = false;
+            //camera.GetComponent<Camera>().enabled = false;
             SceneManager.LoadScene("Clear");//ゲームクリア
         }
     }
