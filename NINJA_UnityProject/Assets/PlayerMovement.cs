@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             acceleration += 0.002f;
-            if (acceleration > 0.5f) acceleration = 0.5f;
+            if (acceleration > 0.05f) acceleration = 0.5f;
         }
         else
         {
@@ -124,15 +124,15 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //反射時に一定時間だけ処理を止める
-    IEnumerator WaitKeyInput() {
+    //IEnumerator WaitKeyInput() {
 
-        this.gameObject.GetComponent<PlayerMovement>().enabled = false;
-        {
-            yield return new WaitForSeconds(0.5f);
-        }
-        this.gameObject.GetComponent<PlayerMovement>().enabled = true;
+    //    this.gameObject.GetComponent<PlayerMovement>().enabled = false;
+    //    {
+    //        yield return new WaitForSeconds(0.5f);
+    //    }
+    //    this.gameObject.GetComponent<PlayerMovement>().enabled = true;
 
-    }
+    //}
 
     
 }
