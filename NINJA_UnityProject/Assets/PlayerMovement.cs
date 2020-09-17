@@ -26,6 +26,16 @@ public class PlayerMovement : MonoBehaviour
     public bool RightTurnFlg = false;   //右90°ターン
     public bool LeftTurnFlg = false;    //左90°ターン
 
+    //SE
+    private new AudioSource audio;
+
+    public AudioClip JumpSE;
+
+    void Start()
+    {
+        //Componentを取得
+        audio= GetComponent<AudioSource>();
+    }
     private void FixedUpdate()
     {
         if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
@@ -83,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //play.GetComponent<Rigidbody>().AddForce(0f, JumpForce, 0f);
             rb.velocity = Vector3.up * JumpForce;
+            audio.PlayOneShot(JumpSE);
             isJump = true;
         }
     }
@@ -95,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector3.up * JumpForce;
             cs.Turn_Vec = -1;
             cs.Turn_Angle = 180f;
+            audio.PlayOneShot(JumpSE);
             isWall = false;
         }
 
