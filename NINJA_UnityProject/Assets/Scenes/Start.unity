@@ -2428,6 +2428,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   acceleration: 0
+  cs: {fileID: 0}
+  rb: {fileID: 0}
+  isJump: 0
+  JumpForce: 100
+  isWall: 0
+  WallJumpForce: 0
+  RightTurnFlg: 0
+  LeftTurnFlg: 0
+  JumpSE: {fileID: 0}
 --- !u!1 &586240786
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,6 +3611,7 @@ MonoBehaviour:
   Sensitivity: 500
   player: {fileID: 566854779}
   JumpForce: 9
+  isJump: 0
 --- !u!1 &986916118
 GameObject:
   m_ObjectHideFlags: 0
@@ -6749,6 +6759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1878670657}
   - component: {fileID: 1878670656}
+  - component: {fileID: 1878670658}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -6782,6 +6793,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1878670658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878670655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1d2f717e960584081619c89b415ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1879864618
 GameObject:
   m_ObjectHideFlags: 0

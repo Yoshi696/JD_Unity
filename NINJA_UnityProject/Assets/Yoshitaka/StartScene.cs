@@ -27,7 +27,7 @@ public class StartScene : MonoBehaviour
             Debug.Log(1);
             if (Input.GetButtonDown("Cont_Jump") || Input.GetKeyDown("space")) //Aボタンを押したら開始
             {
-                GameObject.Find("Player2").transform.position = new Vector3(48.06f, 1.56f, -45.1f);
+                //GameObject.Find("Player2").transform.position = new Vector3(48.06f, 1.56f, -45.1f);
                 SceneManager.LoadScene("Start");//ゲームタイトル
             }
         }
@@ -37,7 +37,7 @@ public class StartScene : MonoBehaviour
             if (Input.GetButtonDown("Cont_Jump") || Input.GetKeyDown("space")) //Aボタンを押したら開始
             {
                 //  Destroy(this);
-                GameObject.Find("Player2").transform.position = new Vector3(48.06f, 1.56f, -45.1f);
+                //GameObject.Find("Player2").transform.position = new Vector3(48.06f, 1.56f, -45.1f);
                 SceneManager.LoadScene("Start");//ゲームタイトル
             }
         }

@@ -39,7 +39,7 @@ public class CamSystem : MonoBehaviour
         cam = GameObject.Find("PlayerCamera");
 
         Cursor.lockState = CursorLockMode.Locked;
-
+        Cursor.visible = false;
 
         play = GameObject.Find("Player2");
 

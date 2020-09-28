@@ -2603,7 +2603,6 @@ GameObject:
   - component: {fileID: 566854778}
   - component: {fileID: 566854777}
   - component: {fileID: 566854780}
-  - component: {fileID: 566854781}
   - component: {fileID: 566854782}
   m_Layer: 0
   m_Name: Player2
@@ -2683,18 +2682,6 @@ MonoBehaviour:
   RightTurnFlg: 0
   LeftTurnFlg: 0
   JumpSE: {fileID: 8300000, guid: d7c52edb73ac19e4b819fcfd604e6d45, type: 3}
---- !u!114 &566854781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566854776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f28fd3fcf27ee0f49bf391b6b5c7c5b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &566854782
 AudioSource:
   m_ObjectHideFlags: 0

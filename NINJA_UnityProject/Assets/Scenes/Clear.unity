@@ -2285,6 +2285,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   acceleration: 0
+  cs: {fileID: 0}
+  rb: {fileID: 0}
+  isJump: 0
+  JumpForce: 100
+  isWall: 0
+  WallJumpForce: 0
+  RightTurnFlg: 0
+  LeftTurnFlg: 0
+  JumpSE: {fileID: 0}
 --- !u!1 &586240786
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,6 +3396,7 @@ GameObject:
   - component: {fileID: 913683824}
   - component: {fileID: 913683823}
   - component: {fileID: 913683825}
+  - component: {fileID: 913683826}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -3406,8 +3416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6797e44e42ef3974c815b7c2136e339a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 981807081}
-  play2: {fileID: 566854776}
 --- !u!4 &913683824
 Transform:
   m_ObjectHideFlags: 0
@@ -3432,6 +3440,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44e2ad006c13aa943a7aa7bf440ce3e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &913683826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913683822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1d2f717e960584081619c89b415ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &963194225
@@ -3617,6 +3637,7 @@ MonoBehaviour:
   Sensitivity: 500
   player: {fileID: 566854779}
   JumpForce: 9
+  isJump: 0
 --- !u!1 &986916118
 GameObject:
   m_ObjectHideFlags: 0
